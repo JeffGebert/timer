@@ -26,6 +26,7 @@ stdin.on('data', (key) => {
     console.log("Thanks for using me, caio!")
     process.exit();
   } else if (key in numbers) {
+    console.log("Setting a timer for " + key + " seconds .....");
     setTimeout(() => {
       process.stdout.write('\x07')
     }, 1000 * key)
